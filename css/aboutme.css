@@ -1,0 +1,79 @@
+.aboutme-container {
+  background-color: #111;
+  width: auto;
+  height: 500px;
+  border-radius: 10px;
+}
+.about-me {
+  position: absolute;
+  background-color: #222;
+  height: 500px;
+  width: 60%;
+  border-radius: 10px;
+}
+.about-me h1,
+.about-me p {
+  padding: 0px 50px;
+  color: #eee;
+  text-align: center;
+  font-family: cursive;
+}
+.about-me h1 {
+  font-size: 50px;
+}
+.about-me p {
+  font-size: 25px;
+  height: 250px;
+}
+.socials {
+  position: absolute;
+  align-items: center;
+  width: auto;
+  left: 35%;
+}
+.socials i {
+  position: relative;
+  color: #333;
+  cursor: pointer;
+  align-items: flex-end;
+}
+.profile-img {
+  width: 40%;
+}
+
+.profile-img img {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  margin-top: 5%;
+  left: 165%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
