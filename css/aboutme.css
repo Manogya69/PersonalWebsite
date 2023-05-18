@@ -1,16 +1,34 @@
+body {
+  overflow: hidden;
+}
 .aboutme-container {
   background-color: #111;
   width: auto;
-  height: 500px;
+  height: 89vh; /*  bottom ma alikati gap xodna haleko */
   border-radius: 10px;
 }
 .about-me {
   position: absolute;
   background-color: #222;
-  height: 500px;
+  height: 89vh; /*  bottom ma alikati gap xodna haleko */
   width: 60%;
   border-radius: 10px;
 }
+
+.profile-img {
+  width: 40%;
+}
+
+.profile-img img {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  margin-top: 20%;
+  left: 165%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .about-me h1,
 .about-me p {
   padding: 0px 50px;
@@ -23,7 +41,7 @@
 }
 .about-me p {
   font-size: 25px;
-  height: 250px;
+  height: auto;
 }
 .socials {
   position: absolute;
@@ -33,22 +51,9 @@
 }
 .socials i {
   position: relative;
-  color: #333;
+  color: #fff;
   cursor: pointer;
   align-items: flex-end;
-}
-.profile-img {
-  width: 40%;
-}
-
-.profile-img img {
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  margin-top: 5%;
-  left: 165%;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .slide-in-left {
