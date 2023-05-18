@@ -1,21 +1,74 @@
-<!-- form -->
-<div class="container">
-  <h1>Please Login</h1>
-  <form action="">
-    <div class="form-control">
-      <input
-        type="text"
-        required />
-      <label>Email</label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link
+      rel="stylesheet"
+      href="css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="css/form.css" />
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav
+      class="active"
+      id="nav">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="work-experience.html">Work Experience</a>
+        </li>
+        <li>
+          <a href="my-skills.html">My Skills</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="contact-me.html">Contact Me</a>
+        </li>
+      </ul>
+      <button
+        class="icon"
+        id="toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
+    </nav>
+    <!-- nav bar end-->
+
+    <!-- form -->
+    <div class="container">
+      <h1>Please Login</h1>
+      <form action="">
+        <div class="form-control">
+          <input
+            type="text"
+            required />
+          <label>Email</label>
+        </div>
+        <div class="form-control">
+          <input
+            type="text"
+            required />
+          <label>Password</label>
+        </div>
+        <button class="btn">Login</button>
+        <p class="text">Don't have an Account? <a href="#">Register</a></p>
+      </form>
     </div>
-    <div class="form-control">
-      <input
-        type="text"
-        required />
-      <label>Password</label>
-    </div>
-    <button class="btn">Login</button>
-    <p class="text">Don't have an Account? <a href="#">Register</a></p>
-  </form>
-</div>
-<!-- form end -->
+    <!-- form end -->
+
+    <script src="scripts/form-wave.js"></script>
+  </body>
+</html>
