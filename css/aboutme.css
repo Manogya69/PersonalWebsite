@@ -1,84 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  box-sizing: border-box; /* doesnot effect the width after adding padding */
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh; /*viewport height, takes the entire height of the browser. */
   overflow: hidden;
 }
-.aboutme-container {
-  background-color: #111;
-  width: auto;
-  height: 89vh; /*  bottom ma alikati gap xodna haleko */
-  border-radius: 10px;
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
-.about-me {
+.left-slide {
+  height: 100%;
+  width: 35%;
   position: absolute;
-  background-color: #222;
-  height: 89vh; /*  bottom ma alikati gap xodna haleko */
-  width: 60%;
-  border-radius: 10px;
+  top: 0;
+  left: 0;
+  transition: transform, 0.5s ease-in-out;
 }
-
-.profile-img {
-  width: 40%;
+.left-slide > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
 }
-
-.profile-img img {
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  margin-top: 20%;
-  left: 165%;
-  border-radius: 50%;
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: -40px;
+}
+.left-slide p {
+  margin: 10px 40px;
+}
+.right-slide {
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 35%;
+  width: 65%;
+  transition: transform, 0.5s ease-in-out;
+}
+.right-slide > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+.right-slide img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
-
-.about-me h1,
-.about-me p {
-  padding: 0px 50px;
-  color: #eee;
-  text-align: center;
-  font-family: cursive;
-}
-.about-me h1 {
-  font-size: 50px;
-}
-.about-me p {
-  font-size: 25px;
-  height: auto;
-}
-.socials {
-  position: absolute;
-  align-items: center;
-  width: auto;
-  left: 35%;
-}
-.socials i {
-  position: relative;
-  color: #fff;
+button {
+  background-color: #fff;
+  border: none;
+  color: #aaa;
   cursor: pointer;
-  align-items: flex-end;
+  font-size: 16px;
+  padding: 15px;
 }
-
-.slide-in-left {
-  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+button:hover {
+  color: #222;
 }
-.slide-in-right {
-  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+button:focus {
+  outline: none;
 }
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.slider-container .action-buttons button {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  z-index: 100;
 }
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.slider-container .action-buttons .down-button {
+  transform: translateX(-100%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.slider-container .action-buttons .up-button {
+  transform: translateY(-100%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
