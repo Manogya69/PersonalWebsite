@@ -6,7 +6,6 @@
   padding: 0;
 }
 body {
-  /* background-color: #efedd6; */
   font-family: "Roboto", sans-serif;
   display: flex; /* centers everything */
   flex-direction: column;
@@ -15,20 +14,35 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+/* background image */
+.work-experience-container img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+  z-index: -10;
+}
+
 h1 {
   margin: 10px;
 }
 .box {
-  background-color: steelblue;
+  background: rgb(121, 199, 247);
+  background: linear-gradient(
+    180deg,
+    rgba(121, 199, 247, 1) 55%,
+    rgba(120, 195, 240, 1) 56%,
+    rgba(217, 142, 79, 1) 93%
+  );
   color: #fff;
   width: 1000px;
-  height: 350px;
-  margin: 10px;
-  border-radius: 10px;
+  height: 600px;
+  position: absolute;
+  border-radius: 15px;
   box-shadow: 2px 4 px 5px rgba(0, 0, 0, 0.3);
   transform: translateX(1000%);
   transition: transform 0.4s ease;
-  padding: 5px;
+  padding: 40px;
   margin: 10px;
 }
 .box:nth-of-type(even) {
