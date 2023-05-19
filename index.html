@@ -8,24 +8,20 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <!-- font awesome icon link  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <!-- css links  -->
-    <link
-      rel="stylesheet"
-      href="css/nav.css" />
     <link
       rel="stylesheet"
       href="css/aboutme.css" />
-    <!-- css links  End-->
-    <title>Portfolio Website</title>
+    <link
+      rel="stylesheet"
+      href="css/nav.css" />
+    <title>Vertical Slider</title>
   </head>
-
   <body>
     <!-- nav bar -->
     <nav id="nav">
@@ -47,43 +43,92 @@
         </li>
       </ul>
     </nav>
+    <!-- nav bar end-->
 
-    <!-- <br /><br /> -->
+    <div class="slider-container">
+      <div class="left-slide">
+        <div style="background-color: #00acee">
+          <h1>Twitter</h1>
+          <p>
+            <i class="fab fa-twitter fa-3x"
+              ><a href="https://twitter.com/manogya69"></a
+            ></i>
+          </p>
+        </div>
 
-    <!-- about me  -->
-    <div class="aboutme-container">
-      <div class="about-me slide-in-left">
-        <h1>Hello World!</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quas
-          fugiat tempore, placeat eligendi tenetur cum. Eveniet, amet, ipsa cum
-          facere officia rerum autem iure corporis suscipit nam deserunt
-          repellendus quibusdam debitis assumenda unde corrupti molestias
-          recusandae rem laudantium veniam laboriosam repellat animi cumque
-          vitae. Ut quasi molestiae quis libero!
-        </p>
-        <div class="socials">
-          <i class="fab fa-github fa-3x">
-            <a href="https://github.com/Manogya69"></a
-          ></i>
-          <i class="fab fa-twitter fa-3x"
-            ><a href="https://twitter.com/manogya69"></a
-          ></i>
-          <i class="fab fa-instagram fa-3x"
-            ><a href="https://www.instagram.com/_manogya/"></a
-          ></i>
-          <i class="fab fa-reddit fa-3x"
-            ><a href="https://www.reddit.com/user/New_Ebb_4779"></a
-          ></i>
+        <div style="background-color: #171515">
+          <h1>Github</h1>
+          <p>
+            <i class="fab fa-github fa-3x">
+              <a href="https://github.com/Manogya69"></a
+            ></i>
+          </p>
+        </div>
+        <div
+          style="
+            background: radial-gradient(
+              circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%
+            );
+          ">
+          <h1>Instagram</h1>
+          <p>
+            <i class="fab fa-instagram fa-3x"
+              ><a href="https://www.instagram.com/_manogya/"></a
+            ></i>
+          </p>
+        </div>
+        <div style="background-color: #171515">
+          <h1>Hello World</h1>
+          <p>
+            Welcome to my website! This website is still in development. Please
+            feel free to give me some advice on my website and I promise I will
+            not reply "Who Asked?"
+            <br /><br />
+            Do Press the up and down arrows to navigate through my socials :D
+          </p>
         </div>
       </div>
 
-      <div class="profile-img slide-in-right">
-        <img
-          src="img/pp.jpg"
-          alt="profile-picture" />
+      <div class="right-slide">
+        <!-- Twitter -->
+        <div style="background-image: url('')">
+          <img
+            src="../../img/pp2.jpg"
+            alt="profile-picture" />
+        </div>
+        <!-- Instagram -->
+        <div style="background-image: url('')">
+          <img
+            src="../../img/insta.jpg"
+            alt="instagram" />
+        </div>
+        <!-- Github -->
+        <div style="background-image: url('')">
+          <img
+            src="../../img/github.jpg"
+            alt="github" />
+        </div>
+        <!-- Home -->
+        <div style="background-image: url('')">
+          <img
+            src="../../img/twitter.jpg"
+            alt="twitter" />
+        </div>
+      </div>
+      <div class="action-buttons">
+        <button class="down-button">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="up-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
       </div>
     </div>
-    <!-- about me end  -->
+    <script src="scripts/vertical-slider.js"></script>
   </body>
 </html>
