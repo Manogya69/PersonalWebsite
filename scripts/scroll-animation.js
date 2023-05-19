@@ -1,4 +1,5 @@
 const boxes = document.querySelectorAll(".box");
+const container = document.querySelector(".container");
 
 window.addEventListener("scroll", checkBoxes);
 checkBoxes(); //remove this if you want to show content only after scrolling
