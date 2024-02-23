@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url(//db.onlinewebfonts.com/c/0fa8ae4571da319707bcd35bc5216764?family=Aja);
+
+* {
+  box-sizing: border-box; /* doesnot effect the width after adding padding */
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex; /* centers everything */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  margin: 0;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.box {
+  background-color: rgba(32, 30, 30, 0.8);
+  color: #fff;
+  width: 1000px;
+  height: 600px;
+  padding: 40px;
+  margin: 10px;
+  /* position: relative; */
+  border-radius: 25px;
+  box-shadow: 2px 4 px 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(1000%);
+  transition: transform 0.4s ease;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-1000%);
+}
+.box.show {
+  transform: translateX(0);
+}
+.work-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: fit-content;
+  width: fit-content;
+}
+.work-icon img {
+  width: 250px;
+  height: 250px;
+}
+
+.work-experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.position {
+  padding-left: 5px;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Aja;
+}
+.workplace {
+  font-size: 25px;
+  font-family: monospace;
+}
+.worktime {
+  color: #444;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+.about-work {
+  padding: 25px;
+  font-size: 20px;
+  font-family: Manege;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Image Loader</title>
+
+    <style>
+       /* Apply some basic styles to the body element */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the image container as a grid */
+#imageContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Gap between grid items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style each house section */
+.house {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Style the house titles */
+.house h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+/* Style the individual images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Style image captions (alt text) */
+img::after {
+    content: attr(alt);
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Add a hover effect to images */
+img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+<div class="house_1">
+    <h1>house1</h1>
+        <img src="img/database_images/house1/Exterior.png" alt="Exterior">
+        <img src="img/database_images/house1//Exterior2.png" alt="Exterior2">
+        <img src="img/database_images/house1/Exterior3.png" alt="Exterior3">
+        <img src="img/database_images/house1//Exterior4.png" alt="Exterior4">
+
+
+        <img src="img/database_images/house1//Hallway.png" alt="Hallway">
+        <img src="img/database_images/house1/LivingRoom.png" alt="LivingRoom">
+        <img src="img/database_images/house1//BedRoom.png" alt="BedRoom">
+        <img src="img/database_images/house1//BathRoom.png" alt="BathRoom">
+        <img src="img/database_images/house1//DiningRoom.png" alt="DiningRoom">
+        <img src="img/database_images/house1//Kitchen.png" alt="Kitchen">
+        <img src="img/database_images/house1//Office.png" alt="Office">
+        <img src="img/database_images/house1//Garage.png" alt="Garage">
+    </div>
+    <div class="house_2">
+        <h1>house2</h1>
+        <img src="img/database_images/house2/Exterior1.png" alt="Exterior">
+        <img src="img/database_images/house2//Exterior2.png" alt="Exterior2">
+        <img src="img/database_images/house2/Exterior3.png" alt="Exterior3">
+        <img src="img/database_images/house2//Exterior4.png" alt="Exterior4">
+
+
+        <img src="img/database_images/house2/Hallway.png" alt="Hallway">
+        <img src="img/database_images/house2/LivingRoom.png" alt="LivingRoom">
+        <img src="img/database_images/house2/BedRoom.png" alt="BedRoom">
+        <img src="img/database_images/house2/BathRoom.png" alt="BathRoom">
+        <img src="img/database_images/house2/Kitchen.png" alt="Kitchen">
+        <img src="img/database_images/house2/Office.png" alt="Office">
+        <img src="img/database_images/house2/Garage.png" alt="Garage">
+    </div>
+    <div class="house_3">
+        <h1>house3</h1>
+        <img src="img/database_images/house3/Exterior1.png" alt="Exterior">
+        <img src="img/database_images/house3/Exterior2.png" alt="Exterior2">
+        <img src="img/database_images/house3/Exterior3.png" alt="Exterior3">
+        <img src="img/database_images/house3/Exterior4.png" alt="Exterior4">
+
+
+        <img src="img/database_images/house3/Hallway.png" alt="Hallway">
+        <img src="img/database_images/house3/LivingRoom.png" alt="LivingRoom">
+        <img src="img/database_images/house3/BedRoom.png" alt="BedRoom">
+        <img src="img/database_images/house3/BathRoom.png" alt="BathRoom">
+        <img src="img/database_images/house3/DiningRoom.png" alt="DiningRoom">
+        <img src="img/database_images/house3/Kitchen.png" alt="Kitchen">
+        <img src="img/database_images/house3/Office.png" alt="Office">
+        <img src="img/database_images/house3/Garage.png" alt="Garage">
+    </div>
+    <div class="house_4">
+        <h1>house4</h1>
+        <img src="img/database_images/house4/Exterior1.png" alt="Exterior">
+        <img src="img/database_images/house4/Exterior2.png" alt="Exterior2">
+        <img src="img/database_images/house4/Exterior3.png" alt="Exterior3">
+        <img src="img/database_images/house4/Exterior4.png" alt="Exterior4">
+        <img src="img/database_images/house4/Exterior5.png" alt="Exterior5">
+        <img src="img/database_images/house4/Exterior6.png" alt="Exterior6">
+
+
+        <img src="img/database_images/house4/Hallway.png" alt="Hallway">
+        <img src="img/database_images/house4/LivingRoom.png" alt="LivingRoom">
+        <img src="img/database_images/house4/BedRoom.png" alt="BedRoom">
+        <img src="img/database_images/house4/BathRoom.png" alt="BathRoom">
+        <img src="img/database_images/house4/DiningRoom.png" alt="DiningRoom">
+        <img src="img/database_images/house4/Kitchen.png" alt="Kitchen">
+        <img src="img/database_images/house4/Office.png" alt="Office">
+        <img src="img/database_images/house4/Garage.png" alt="Garage">
+    </div>
+
+    </div>
+
+    
+</body>
+</html>

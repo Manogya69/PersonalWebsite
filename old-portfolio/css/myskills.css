@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box; /* doesnot effect the width after adding padding */
+  margin: 0;
+  padding: 0;
+}
+.myskills-container {
+  background-color: black;
+}
+.skills {
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  background: #212121;
+  /* flex-direction: row; */
+  gap: 15px;
+  padding: 0.4em;
+}
+
+.skills p {
+  height: 150px;
+  /* width: 170px; */
+  width: 100px;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 1s;
+  background: #212121;
+  border: 1px solid #ff5a91;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills p:hover {
+  flex: 4;
+}
+
+.skills p span {
+  min-width: 14em;
+  padding: 0.5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+  color: #ff568e;
+  letter-spacing: 0.1em;
+}
+
+.skills p:hover span {
+  transform: rotate(0);
+}
