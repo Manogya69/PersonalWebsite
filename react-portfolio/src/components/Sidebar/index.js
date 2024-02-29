@@ -10,10 +10,10 @@ import { faLinkedin, faGithub, faTwitter,  } from '@fortawesome/free-brands-svg-
 
 const Sidebar = () => (
   <div className="nav-bar">
-    {/* <Link className="logo" to="/">
+    <Link className="logo" to="/">
       <img src={LogoS} alt="logo" />
-      <img className="sub-logo" src={LogoSubstitute} alt="subtitle" />
-    </Link> */}
+      {/* <img className="sub-logo" src={LogoSubstitute} alt="subtitle" /> */}
+    </Link>
     <nav>
       <NavLink exact="true" activeclassname="active" to="/">
         <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
