@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIMI batch record</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    height: 500px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1.2em; /* Larger text */
+}
+
+.input-container input[type="text"],
+.input-container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.1em; /* Larger text */
+}
+
+.button-container button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em; /* Larger text */
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.list-container {
+    margin: 20px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+.list-container h2 {
+    font-size: 1.4em; /* Larger text for heading */
+}
+
+.list-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-container ul li {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em; /* Larger text */
+    border: 1px solid #ccc; /* Thin border */
+}
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Batch Recorder</h1>
+        <div class="input-container">
+            <form id="stringForm">
+                <label for="inputString">Enter batch:</label>
+                <input type="text" id="inputString" name="inputString">
+            </form>
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="addString()">Add Batch</button>
+        </div>
+        <br>
+        <br>
+        <div class="input-container">
+            <label for="filterOption">Filter by Client Batch:</label>
+            <select id="filterOption" onchange="filterStrings()">
+                <option value="">Select Batch</option>
+                <!-- Populate the dropdown options dynamically -->
+            </select>
+            <input type="text" id="filterClientBatch" name="filterClientBatch" placeholder="Or type batch number">
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="filterStrings()">Filter</button>
+        </div>
+    </div>
+
+    <div class="container list-container">
+        <h2>Batch List</h2>
+        <ul id="stringList"></ul>
+    </div>
+
+    <script>
+        let strings = [];
+        let clientBatches = [];
+
+        function addString() {
+            let inputString = document.getElementById('inputString').value;
+            if (inputString.trim() !== '') {
+                strings.push(inputString);
+                addStringToList(inputString);
+                updateFilterOptions(inputString);
+                document.getElementById('inputString').value = '';
+            }
+        }
+
+        function addStringToList(string) {
+            let listItem = document.createElement('li');
+            listItem.textContent = string;
+            document.getElementById('stringList').appendChild(listItem);
+        }
+
+        function updateFilterOptions(string) {
+            let clientBatch = getClientBatchNumber(string);
+            if (!clientBatches.includes(clientBatch)) {
+                clientBatches.push(clientBatch);
+                populateFilterOptions();
+            }
+        }
+
+        function getClientBatchNumber(string) {
+            let parts = string.split('-');
+            return parts[1];
+        }
+
+        function populateFilterOptions() {
+            let filterDropdown = document.getElementById('filterOption');
+            filterDropdown.innerHTML = '<option value="">Select Batch</option>';
+            clientBatches.forEach(batch => {
+                let option = document.createElement('option');
+                option.value = batch;
+                option.textContent = batch;
+                filterDropdown.appendChild(option);
+            });
+        }
+
+        function filterStrings() {
+            let filterKeyword = document.getElementById('filterClientBatch').value.trim();
+            let selectedBatch = document.getElementById('filterOption').value;
+            let filteredStrings;
+            if (filterKeyword !== '') {
+                filteredStrings = strings.filter(str => str.includes(filterKeyword));
+            } else {
+                filteredStrings = strings;
+            }
+            if (selectedBatch !== '') {
+                filteredStrings = filteredStrings.filter(str => str.includes(selectedBatch));
+            }
+            displayFilteredStrings(filteredStrings);
+        }
+
+        function displayFilteredStrings(filteredStrings) {
+            let listContainer = document.getElementById('stringList');
+            listContainer.innerHTML = '';
+            filteredStrings.forEach(string => {
+                let listItem = document.createElement('li');
+                listItem.textContent = string;
+                listContainer.appendChild(listItem);
+            });
+        }
+    </script>
+</body>
+</html>
