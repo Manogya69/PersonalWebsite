@@ -1,148 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-    <link
-      rel="stylesheet"
-      href="css/aboutme.css" />
-    <link
-      rel="stylesheet"
-      href="css/nav.css" />
-    <link
-      href="//db.onlinewebfonts.com/c/b8efc807de4361147855dd87d07cb12f?family=Ano+Stencil"
-      rel="stylesheet"
-      type="text/css" />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Ruda:wght@700&display=swap"
-      rel="stylesheet" />
-    <title>Wasssuppp!?</title>
-  </head>
-  <body>
-    <!-- nav bar -->
-    <nav id="nav">
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="work-experience.html">Work Experience</a>
-        </li>
-        <li>
-          <a href="my-skills.html">My Skills</a>
-        </li>
-        <li>
-          <a href="projects.html">Projects</a>
-        </li>
-        <li>
-          <a href="contact-me.html">Contact Me</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- nav bar end-->
 
-    <div class="slider-container">
-      <div class="left-slide">
-        <div style="background-color: #00acee">
-          <h1>LinkedIn</h1>
-          <p>
-            <i class="fab fa-linkedin fa-3x"
-              ><a href="https://www.linkedin.com/in/manogya-manandhar-060b14225/"></a
-            ></i>
-          </p>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-        <div style="background-color: #171515">
-          <h1>Github</h1>
-          <p>
-            <i class="fab fa-github fa-3x">
-              <a href="https://github.com/Manogya69"></a
-            ></i>
-          </p>
-        </div>
-        <div
-          style="
-            background: radial-gradient(
-              circle at 30% 107%,
-              #fdf497 0%,
-              #fdf497 5%,
-              #fd5949 45%,
-              #d6249f 60%,
-              #285aeb 90%
-            );
-          ">
-          <h1>Instagram</h1>
-          <p>
-            <i class="fab fa-instagram fa-3x"
-              ><a href="https://www.instagram.com/_manogya/"></a
-            ></i>
-          </p>
-        </div>
-        <div style="background-color: #171515">
-          <h1>Hello World!</h1>
-          <p>
-            Welcome to my website! This website is still in development. Please
-            feel free to give me some advice on my website and I promise I will
-            not reply "Who Asked?"
-            <br /><br />
-            Do Press the up and down arrows to navigate through my socials :D
-          </p>
-        </div>
-      </div>
+        .container {
+            /* background-color: grey; */
+            width: 80%;
+            align-items: center;
+            margin: 10px;
+            margin-left: 150px;
+        }
 
-      <div class="right-slide">
-        <!-- Twitter -->
-        <div style="background-image: url('')">
-          <img
-            src="../../img/pp2.jpg"
-            alt="profile-picture" />
-        </div>
-        <!-- Instagram -->
-        <div style="background-image: url('')">
-          <img
-            src="../../img/insta.jpg"
-            alt="instagram" />
-        </div>
-        <!-- Github -->
-        <div style="background-image: url('')">
-          <img
-            src="../../img/github.jpg"
-            alt="github" />
-        </div>
-        <!-- Home -->
-        <div style="background-image: url('')">
-          <img
-            src="../../img/linkedin.jpg"
-            alt="linkedin" />
-        </div>
-      </div>
-      <div class="action-buttons">
-        <button class="down-button">
-          <i class="fas fa-arrow-down"></i>
-        </button>
-        <button class="up-button">
-          <i class="fas fa-arrow-up"></i>
-        </button>
-      </div>
+        /* header {
+            text-align: center;
+            padding: 20px;
+
+        } */
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .work-experience {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .company {
+            max-height: 500px;
+            object-fit: cover;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .intro,
+        .workplaces,
+        .projects {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .intro h1,
+        .workplaces h2,
+        .projects h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .workplaces img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .projects h2 {
+            margin-bottom: 20px;
+        }
+
+        .project-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .project-panel a {
+            display: block;
+        }
+
+        .project-panel img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .box {
+            transform: translateX(1000%);
+            transition: transform 1.5s ease;
+        }
+
+        .box:nth-of-type(even) {
+            transform: translateX(-1000%);
+        }
+
+        .box.show {
+            transform: translateX(0);
+        }
+    </style>
+
+<!-- form styling -->
+    <style>
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .btn {
+            cursor: pointer;
+            display: inline-block;
+            background-color: rgb(154, 34, 34);
+            padding: 15px;
+            margin: 15px;
+            font-family: inherit;
+            font-size: 20px;
+            border: 0;
+            border-radius: 5px;
+        }
+
+        .btn:focus {
+            outline: 0;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .text {
+            margin-top: 30px;
+        }
+
+        .form-control {
+            position: relative;
+            margin: 20px 0 40px;
+            width: 300px;
+        }
+
+        .form-control input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px white solid;
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .form-control input:focus,
+        .form-control input:valid {
+            outline: 0;
+            border-bottom-color: lightblue;
+        }
+
+        .form-control label {
+            position: absolute;
+            top: 15px;
+            left: 0;
+        }
+
+        .form-control label span {
+            display: inline-block;
+            font-size: 18px;
+            min-width: 5px;
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .form-control input:focus+label span,
+        .form-control input:valid+label span {
+            color: rgb(114, 55, 16);
+            transform: translateY(-30px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:your-email@example.com">E-mail</a></li>
+                </ul>
+            </nav>
+            <h1 style="margin-top: 25px;">HELLO WORLD!</h1>
+            <p style="width: 690px; font: 1.5em sans-serif; color: gray; margin-top: 25px; margin-bottom: 50px;">Welcome
+                to my website! This website is still
+                in development. Please feel free to give me some advice on
+                my
+                website and I promise I will not reply "Who Asked?"</p>
+        </header>
+        <section>
+            <h2>PLACES I'VE WORKED AT</h2>
+            <div class="work-experience">
+                <img src="assets/1.png" alt="Company 1" class="company">
+                <img src="assets/2.png" alt="Company 2" class="company">
+                <img src="assets/3.png" alt="Company 3" class="company">
+                <img src="assets/4.png" alt="Company 4" class="company">
+                <img src="assets/5.png" alt="Company 5" class="company">
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>AND BUILT SOME AMAZING THINGS</h2>
+            <div class="project-panel">
+                <div class="box"> <a href="link_to_project1"><img src="assets/projects/1.png" alt="Project 1"></a></div>
+                <div class="box"> <a href="link_to_project2"><img src="assets/projects/2.png" alt="Project 2"></a>
+                </div>
+                <div class="box"> <a href="link_to_project3"><img src="assets/projects/3.png" alt="Project 3"></a></div>
+                <div class="box"> <a href="link_to_project4"><img src="assets/projects/4.png" alt="Project 4"></a>
+                </div>
+                <div class="box"> <a href="link_to_project5"><img src="assets/projects/5.png" alt="Project 5"></a></div>
+                <div class="box"> <a href="link_to_project6"><img src="assets/projects/6.png" alt="Project 6"></a></div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h1>Contact Me through Mail</h1>
+            <form action="">
+                <div class="form-control">
+                    <input type="text" required />
+                    <label>Email</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" required />
+                    <label>Name</label>
+                </div>
+                <div class="form-control">
+                    <input type="text" required />
+                    <label>Message</label>
+                </div>
+                <button class="btn">Send Message</button>
+            </form>
+        </section>
     </div>
-    <script src="scripts/vertical-slider.js"></script>
-  </body>
+
+    <script>
+        // scroll animation 
+        const boxes = document.querySelectorAll(".box");
+        const container = document.querySelector(".container");
+
+        window.addEventListener("scroll", checkBoxes);
+        checkBoxes(); //remove this if you want to show content only after scrolling
+
+        function checkBoxes() {
+            const triggerBottom = (window.innerHeight / 5) * 4;
+
+            boxes.forEach((box) => {
+                const boxTop = box.getBoundingClientRect().top;
+
+                if (boxTop < triggerBottom) {
+                    box.classList.add("show");
+                } else {
+                    box.classList.remove("show");
+                }
+            });
+        }
+
+        // form wave
+        const labels = document.querySelectorAll(".form-control label");
+
+        labels.forEach((label) => {
+            label.innerHTML = label.innerText
+                .split("")
+                .map(
+                    (letter, idx) =>
+                        `<span style="transition-delay:${idx * 100}ms">${letter}</span>`
+                )
+                .join("");
+        });
+
+    </script>
+</body>
+
 </html>
